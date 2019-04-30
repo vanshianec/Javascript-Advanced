@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="05.Sum.js"></script>
+</head>
+<body>
+<input type="text" id="num1"/>
+<input type="text" id="num2"/>
+<input type="text" id="result" readonly/>
+<br>
+<button id="sumButton">
+    Sum
+</button>
+<button id="subtractButton">
+    Subtract
+</button>
+<script>
+    let obj = getObject();
+    obj.init('num1', 'num2', 'result');
+    let sumButton = document.getElementById('sumButton');
+    let subtractButton = document.getElementById('subtractButton');
+    sumButton.addEventListener('click', function () {
+        obj.add();
+    });
+    subtractButton.addEventListener('click', function () {
+        obj.subtract();
+    })
+</script>
+</body>
+</html>
